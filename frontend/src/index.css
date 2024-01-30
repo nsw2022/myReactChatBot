@@ -1,0 +1,80 @@
+/*
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+body {
+  margin: 0px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header {
+  background: #1abc9c;
+  display: flex;
+  height: 10em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav {
+  display: flex;
+  background-color: #333333;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #dddddd;
+  color: black;
+  transition: 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+#main {
+  flex: 7;
+  background-color: white;
+  padding: 20px;
+}
+
+.fakeimg {
+  background-color: #aaaaaa;
+  width: 100%;
+  padding: 20px;
+}
+
+aside .fakeimg {
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #dddddd;
+}
+
+/* 반응형 웹 - 미디어 쿼리 */
+/* 사용자의 사이즈에 따라 다르게 반영됨 컴 패드 모바일 순으로 보통작성 함 */
+@media screen and (max-width: 700px) {
+  .container,
+  nav {
+    flex-direction: column;
+  }
+}
